@@ -12,6 +12,10 @@
     <name>rajan-throwable</name>
     <description>A Java library that implements application/problem+json.</description>
 
+    <modules>
+        <module>throwable</module>
+    </modules>
+
     <organization>
         <name>Rajan Soft, Inc</name>
         <url>https://rajansoft.com/</url>
