@@ -11,4 +11,39 @@
 
     <artifactId>throwable-spring-web</artifactId>
 
+    <properties>
+        <spring.version>5.3.24</spring.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.rajansoft</groupId>
+            <artifactId>throwable</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+            <optional>true</optional>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-jcl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 </project>
