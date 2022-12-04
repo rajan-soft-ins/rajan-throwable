@@ -19,7 +19,6 @@ public class ExceptionBuilder {
     String traceId;
     Integer code;
     LocalDateTime timestamp = LocalDateTime.now();
-    ThrowableException cause;
     Map<String, Object> parameters = new HashMap<>();
 
     public ExceptionBuilder(String message, String traceId) {
@@ -50,11 +49,6 @@ public class ExceptionBuilder {
 
     public ExceptionBuilder timestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
-        return this;
-    }
-
-    public ExceptionBuilder cause(ThrowableException cause) {
-        this.cause = cause;
         return this;
     }
 

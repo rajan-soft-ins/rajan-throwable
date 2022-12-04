@@ -20,7 +20,7 @@ public abstract class ThrowableException extends RuntimeException implements Exc
         this.traceId = traceId;
     }
 
-    protected ThrowableException(String message, String traceId, ThrowableException cause) {
+    protected ThrowableException(String message, String traceId, Throwable cause) {
         super(message, cause);
         this.traceId = traceId;
 
@@ -55,12 +55,9 @@ public abstract class ThrowableException extends RuntimeException implements Exc
 
     @Override
     public String toString() {
-        String cause = Objects.isNull(getCause()) ? "null" : getCause().toString();
-
         return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
             .append("message", getMessage())
             .append("traceId", traceId)
-            .append("cause", cause)
             .toString();
     }
 

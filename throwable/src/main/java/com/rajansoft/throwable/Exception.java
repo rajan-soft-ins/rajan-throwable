@@ -19,8 +19,6 @@ public interface Exception {
 
     LocalDateTime getTimestamp();
 
-    Exception getCause();
-
     default Map<String, Object> getParameters() {
         return Collections.emptyMap();
     }

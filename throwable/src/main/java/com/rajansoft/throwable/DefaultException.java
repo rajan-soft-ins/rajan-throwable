@@ -25,7 +25,7 @@ public class DefaultException extends ThrowableException {
     private final transient Map<String, Object> parameters;
 
     public DefaultException(ExceptionBuilder builder) {
-        super(builder.message, builder.traceId, builder.cause);
+        super(builder.message, builder.traceId);
         this.error = builder.error;
         this.path = builder.path;
         this.code = builder.code;
