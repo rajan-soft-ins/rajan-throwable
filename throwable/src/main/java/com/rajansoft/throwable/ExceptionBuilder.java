@@ -18,7 +18,6 @@ public class ExceptionBuilder {
     String path;
     String traceId;
     Integer code;
-    HttpStatus status;
     LocalDateTime timestamp = LocalDateTime.now();
     ThrowableException cause;
     Map<String, Object> parameters = new HashMap<>();
@@ -46,11 +45,6 @@ public class ExceptionBuilder {
 
     public ExceptionBuilder code(Integer code) {
         this.code = code;
-        return this;
-    }
-
-    public ExceptionBuilder status(HttpStatus status) {
-        this.status = status;
         return this;
     }
 

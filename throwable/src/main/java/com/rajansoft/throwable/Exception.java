@@ -17,8 +17,6 @@ public interface Exception {
 
     Integer getCode();
 
-    HttpStatus getStatus();
-
     LocalDateTime getTimestamp();
 
     Exception getCause();

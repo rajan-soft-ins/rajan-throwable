@@ -21,7 +21,6 @@ public class DefaultException extends ThrowableException {
     private final String error;
     private final String path;
     private final Integer code;
-    private final HttpStatus status;
     private final LocalDateTime timestamp;
     private final transient Map<String, Object> parameters;
 
@@ -30,7 +29,6 @@ public class DefaultException extends ThrowableException {
         this.error = builder.error;
         this.path = builder.path;
         this.code = builder.code;
-        this.status = builder.status;
         this.timestamp = builder.timestamp;
         this.parameters = Optional.ofNullable(builder.parameters).orElseGet(HashMap::new);
     }
@@ -48,7 +46,6 @@ public class DefaultException extends ThrowableException {
             .append(error, that.error)
             .append(path, that.path)
             .append(code, that.code)
-            .append(status, that.status)
             .append(timestamp, that.timestamp)
             .append(parameters, that.parameters)
             .isEquals();
@@ -61,7 +58,6 @@ public class DefaultException extends ThrowableException {
             .append(error)
             .append(path)
             .append(code)
-            .append(status)
             .append(timestamp)
             .append(parameters)
             .toHashCode();
@@ -74,7 +70,6 @@ public class DefaultException extends ThrowableException {
             .append("error", error)
             .append("path", path)
             .append("code", code)
-            .append("status", status)
             .append("timestamp", timestamp)
             .append("parameters", parameters)
             .toString();
