@@ -11,7 +11,7 @@ import java.util.Set;
 public class ExceptionBuilder {
 
     private static final Set<String> RESERVED_PROPERTIES =
-        new HashSet<>(Arrays.asList("message", "error", "path", "traceId", "code", "status", "timestamp", "cause"));
+        new HashSet<>(Arrays.asList("message", "error", "path", "traceId", "code", "timestamp"));
 
     String message;
     String error;
