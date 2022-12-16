@@ -60,7 +60,7 @@ public class ExceptionBuilder {
         return this;
     }
 
-    public Exception build() {
+    public ThrowableException build() {
         return new DefaultException(this);
     }
 
