@@ -15,6 +15,7 @@
     <modules>
         <module>throwable</module>
         <module>throwable-spring-web</module>
+        <module>throwable-violation</module>
     </modules>
 
     <organization>
